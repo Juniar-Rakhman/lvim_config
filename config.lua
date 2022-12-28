@@ -1,0 +1,5 @@
+reload "user.core.keymaps"
+reload "user.core.options"
+reload "user.core.telescope"
+reload "user.core.lualine"
+reload "user.plugins"
