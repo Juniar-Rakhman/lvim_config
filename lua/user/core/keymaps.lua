@@ -26,10 +26,11 @@ lvim.keys.normal_mode["<A-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<C-t>"] = ":only<cr>"
 
 
-lvim.builtin.which_key.mappings["c"] = { "<cmd>close<CR>", "Close window" }
-lvim.builtin.which_key.mappings["q"] = { "<cmd>BufferKill<CR>", "Close Buffer" }
+lvim.builtin.which_key.mappings["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" }
+lvim.builtin.which_key.mappings["q"] = { "<cmd>close<CR>", "Close window" }
 lvim.builtin.which_key.mappings["Q"] = { "<cmd>lua require('lvim.utils.functions').smart_quit()<CR>", "Quit" }
--- remap lsp keymaps to Telescope
+
+-- remap lsp keymaps to use Telescope
 lvim.lsp.buffer_mappings.normal_mode["gr"] = { ":Telescope lsp_references<CR>", "Goto References" }
 lvim.lsp.buffer_mappings.normal_mode["gi"] = { ":Telescope lsp_implementations<CR>", "Goto Implementations" }
 lvim.lsp.buffer_mappings.normal_mode["gd"] = { ":Telescope lsp_definitions<CR>", "Goto Definitions" }

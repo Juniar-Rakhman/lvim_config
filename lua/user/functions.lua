@@ -33,6 +33,7 @@ function M.toggle_tabline()
 end
 
 local diagnostics_active = true
+
 function M.toggle_diagnostics()
   diagnostics_active = not diagnostics_active
   if diagnostics_active then

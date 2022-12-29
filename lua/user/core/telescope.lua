@@ -52,6 +52,19 @@ lvim.builtin.telescope.defaults.file_ignore_patterns = {
   "%.tar.gz",
 }
 local _, actions = pcall(require, "telescope.actions")
+
+lvim.builtin.telescope.defaults.layout_strategy = "vertical"
+lvim.builtin.telescope.defaults.layout_config = {
+  vertical = {
+    prompt_position = "top",
+    mirror = true,
+    results_height = 0.6,
+    preview_height = 0.7,
+  },
+  height = 0.87,
+  preview_cutoff = 25,
+}
+
 lvim.builtin.telescope.defaults.mappings = {
   -- for input mode
   i = {
@@ -75,8 +88,8 @@ lvim.builtin.telescope.defaults.mappings = {
     ["<C-t>"] = actions.select_tab,
 
     ["<c-d>"] = require("telescope.actions").delete_buffer,
-
     ["<Tab>"] = actions.close,
+
     ["<S-Tab>"] = actions.close,
 
     ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
@@ -123,21 +136,23 @@ lvim.builtin.telescope.defaults.mappings = {
   },
 }
 
+-- Disable default LVIM telescope themes
+
 lvim.builtin.telescope.pickers.live_grep = {
-  theme = "dropdown",
+  -- theme = "dropdown",
 }
 
 lvim.builtin.telescope.pickers.grep_string = {
-  theme = "dropdown",
+  -- theme = "dropdown",
 }
 
 lvim.builtin.telescope.pickers.find_files = {
-  theme = "dropdown",
+  -- theme = "dropdown",
   previewer = false,
 }
 
 lvim.builtin.telescope.pickers.buffers = {
-  theme = "dropdown",
+  -- theme = "dropdown",
   previewer = false,
   initial_mode = "normal",
 }
@@ -152,22 +167,22 @@ lvim.builtin.telescope.pickers.colorscheme = {
 }
 
 lvim.builtin.telescope.pickers.lsp_references = {
-  theme = "dropdown",
+  -- theme = "dropdown",
   initial_mode = "normal",
 }
 
 lvim.builtin.telescope.pickers.lsp_definitions = {
-  theme = "dropdown",
+  -- theme = "dropdown",
   initial_mode = "normal",
 }
 
 lvim.builtin.telescope.pickers.lsp_declarations = {
-  theme = "dropdown",
+  -- theme = "dropdown",
   initial_mode = "normal",
 }
 
 lvim.builtin.telescope.pickers.lsp_implementations = {
-  theme = "dropdown",
+  -- theme = "dropdown",
   initial_mode = "normal",
 }
 
@@ -176,5 +191,5 @@ require("telescope-tabs").setup {
   close_tab_shortcut = "C-d",
   initial_mode = "normal",
   theme = "dropdown",
-  -- Your custom config :^)
+
 }

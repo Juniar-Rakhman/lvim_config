@@ -1,6 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
-  "leoluz/nvim-dap-go",
+  "windwp/nvim-ts-autotag",
+  "p00f/nvim-ts-rainbow",
   "LukasPietzschmann/telescope-tabs",
   { "chaoren/vim-wordmotion",
     fn = { "<Plug>WordMotion_w" }
@@ -22,4 +23,7 @@ lvim.plugins = {
       vim.api.nvim_set_keymap("n", "F", ":HopWord<cr>", { silent = true })
     end,
   },
+  -- lsp related
+  "leoluz/nvim-dap-go",
+  "mfussenegger/nvim-jdtls",
 }

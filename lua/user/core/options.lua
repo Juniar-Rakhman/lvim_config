@@ -1,12 +1,16 @@
 lvim.colorscheme = "tokyonight"
-lvim.builtin.theme.tokyonight.options.style = "night"
+lvim.builtin.theme.name = "tokyonight"
+lvim.builtin.theme.tokyonight.options.style = "storm"
 lvim.builtin.theme.tokyonight.options.dim_inactive = true
-lvim.builtin.theme.tokyonight.options.use_background = "dark"
 
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.nvimtree.setup.respect_buf_cwd = true
 lvim.builtin.nvimtree.setup.actions.open_file.quit_on_open = true
+
+lvim.builtin.treesitter.rainbow.enable = true -- need p00f/nvim-ts-rainbow
+
+lvim.builtin.indentlines.options.show_current_context = true
 
 lvim.builtin.lir.active = false
 
@@ -22,7 +26,6 @@ lvim.builtin.cmp.window.completion = {
   border = "rounded",
   winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 }
-
 
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -41,6 +44,7 @@ lvim.builtin.treesitter.ensure_installed = {
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.treesitter["markid"] = { enable = true } -- this is an additional plugins. see plugins.lua
 
 local options = {
   backup = false, -- creates a backup file
