@@ -20,7 +20,6 @@ elseif vim.fn.has("unix") == 1 then
 else
 	print("Unsupported system")
 end
-
 -- Find root of project
 local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
 local root_dir = require("jdtls.setup").find_root(root_markers)
@@ -216,7 +215,7 @@ local vopts = {
 }
 
 local mappings = {
-	C = {
+	c = {
 		name = "Java",
 		o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "Organize Imports" },
 		v = { "<Cmd>lua require('jdtls').extract_variable()<CR>", "Extract Variable" },
@@ -229,7 +228,7 @@ local mappings = {
 }
 
 local vmappings = {
-	C = {
+	c = {
 		name = "Java",
 		v = { "<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>", "Extract Variable" },
 		c = { "<Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>", "Extract Constant" },
