@@ -12,3 +12,11 @@ reload("user.core.nvimtree")
 reload("user.core.options")
 reload("user.core.telescope")
 reload("user.core.treesitter")
+
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  {
+    command = "google-java-format",
+    filetypes = { "java" },
+  }
+}
